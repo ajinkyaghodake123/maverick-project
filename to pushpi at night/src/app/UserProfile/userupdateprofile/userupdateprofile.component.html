@@ -1,0 +1,74 @@
+<br>
+<mat-card class="card2" id="card2">
+  <font>
+    <mat-card-subtitle>
+      <h3>Update User Form </h3>
+    </mat-card-subtitle>
+    <table *ngFor="let u of user">
+      <td>
+        <input type="hidden" [(ngModel)]="u.userId" placeholder="userId" />
+      </td>
+      <tr>
+        <td> User Name:</td>
+        <td>
+          <input type="text" [(ngModel)]="u.userName" />
+        </td>
+      </tr>
+      <input type="hidden" [(ngModel)]="u.password" />
+      <tr>
+        <td> E- Mail:</td>
+        <td>
+          <input type="text" [(ngModel)]="u.email" />
+        </td>
+      </tr>
+      <tr>
+        <td> AGE </td>
+        <td>
+          <input type="text" [(ngModel)]="u.age" />
+        </td>
+      </tr>
+      <tr>
+        <td> Image</td>
+        <td>
+          <input type="text" [(ngModel)]="u.image" placeholder="Browse image url"/>
+        </td>
+      </tr>
+      <tr>
+        <td> Cover image </td>
+        <td>
+          <input type="text" [(ngModel)]="u.coverImage" placeholder="Browse Cover image url"/>
+        </td>
+      </tr>
+      <input type="hidden" [(ngModel)]="u.gender" />
+      <tr>
+        <td> location </td>
+        <td>
+          <input type="text" [(ngModel)]="u.location" />
+        </td>
+      </tr>
+      <input type="hidden" [(ngModel)]="u.level" />
+      <input type="hidden" [(ngModel)]="u.levelName" />
+      <tr>
+        <td> About Me </td>
+        <td>
+          <input type="text" [(ngModel)]="u.aboutMe" />
+        </td>
+      </tr>
+      <tr>
+        <td> Status </td>
+        <td>
+          <input type="text" [(ngModel)]="u.status" />
+        </td>
+      </tr>
+      <input type="hidden" [(ngModel)]="u.gameCount" />
+      <tr>
+        <td>
+          <button type="submit" class="btn btn-success" (click)="updateUser(u)" (click)="goBack()">Update</button>
+        </td>
+      </tr>
+    </table>
+  </font>
+</mat-card>
+
+
+<!-- [routerLink]="['profile']" -->

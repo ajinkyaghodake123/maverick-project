@@ -1,0 +1,46 @@
+<!-- *ngIf="isLoggedIn$ | async as isLoggedIn" -->
+<div>
+  <mat-toolbar class="primary">
+    
+    <h1 class="app-name">
+      <a href="" [routerLink]="['/home']">Maverick</a>
+    </h1>
+    <span class="example-spacer"></span>
+    <a [routerLink]="['/profile']">
+      <mat-icon id="example-icon" class="menu-icon">account_circle</mat-icon>
+    </a>
+
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+
+      <mat-button-toggle mat-raised-button color="primary" *ngIf="isLoggedIn$ | async as isLoggedIn" (click)="onLogout()">Log Out</mat-button-toggle>
+      <!-- <button mat-button (click)="onLogout()" >Logout</button>       -->
+    </mat-button-toggle-group>
+
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+    <!-- <mat-sidenav #snav class="sidenav">
+
+      <mat-nav-list (click)="snav.toggle()">
+        <a href="" [routerLink]="['/content', {title:'home'}]" mat-list-item>Home</a>
+        <a href="" [routerLink]="['/question']" mat-list-item>Administrator</a>
+        <a href="" [routerLink]="['/content', {title:'about us'}]" mat-list-item>About Us</a>
+        <a href="" [routerLink]="['/content', {title:'blogs'}]" mat-list-item>Blogs</a>
+
+      </mat-nav-list>
+
+    </mat-sidenav> -->
+
+
+
+    <mat-sidenav-content fxLayout="column" fxLayoutAlign="space-between">
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+
+      <div class="footer" fxLayoutAlign="center center">
+        <h3 class="mat-h3">@CopyRights Maverick Apps</h3>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

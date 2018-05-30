@@ -1,0 +1,100 @@
+// mat-card{
+//   box-shadow: 15px 21px 30px 7px rgba(6, 132, 145, 0.3), -1px 15px 14px rgba(0, 0, 0, 0.22) !important;
+//   margin-top:30px;
+//   min-height:216px;
+// }
+// mat-checkbox{
+//   float:right;
+//   bottom: 0px;
+//   right: 0px;
+//   margin-bottom:6px;
+// }
+// img{
+//   max-height:92px;
+// }
+// .container{
+//   font-size: 24px;
+//   font-weight: 400;
+// }
+// .continue{
+// float:right;
+//   bottom:48px;
+//   right: 16px;
+//   font-size: 18px;
+// }
+
+// .twoLine{
+//   max-height: 36px ;
+//   font-size : 20px;
+// }
+
+
+
+
+
+
+
+
+
+
+.background{
+  z-index:-1;
+}
+
+
+.gridCentered .static {
+  position: absolute;
+  visibility: hidden;
+}
+.gridCentered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.example-card {
+  max-width: 198px;
+  max-height: 236px;
+ }
+
+mat-card-title{
+letter-spacing: 2px;
+
+}
+
+.center{
+  margin: 0 auto;
+   }
+  
+   .mat-card-title {
+    font-weight: bolder;
+  }
+  .right{
+    align-content:right;
+  }
+  .aa{
+    margin-top:20px !important;
+  }
+  mat-card{
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !important;
+  }
+  .container{
+    margin-top:0;
+    margin-bottom:0;
+  }
+  mat-card{
+    margin-bottom: 10px;
+  }
+  .header{
+      font-weight:bolder;
+      align-content: center;
+  }
+
+  .mat-card-image{
+    height:120px;
+  }
+
+  mat-checkbox{
+    position: absolute;
+    bottom: -2px;
+    right: 5px;
+    }

@@ -1,0 +1,250 @@
+<!-- <div class= "responsive">
+  <mat-card class="example-card1">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Log in</mat-card-title>
+    </mat-card-header>
+
+    User ID :
+    <mat-form-field>
+      <input matInput [(ngModel)]="authenticationModel.email" placeholder="Enter User Id">
+    </mat-form-field>
+    <br>
+
+    Password :
+    <mat-form-field>
+      <input matInput [type]="hide ? 'password' : 'text'" [(ngModel)]="authenticationModel.password" placeholder="Enter Password">
+
+    </mat-form-field>
+    <table style="margin-left: -12px;">
+      <tr>
+        <td>
+          <button mat-raised-button color="primary" (click)="loginUser(authenticationModel)" mat-dialog-close>Login</button>
+        </td>
+        <td>
+
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <div id="or1">
+          OR
+        </div>
+      </tr>
+      <tr>
+        <button class="arrangeButton" mat-raised-button color="warn" (click)="socialSignIn('google')" mat-dialog-close>Login with Google</button>
+      </tr>
+
+      <tr>
+        <div id="or2">
+          OR
+        </div>
+      </tr>
+      <tr>
+        <button class="arrangeButton" mat-raised-button color="primary" (click)="socialSignIn('facebook')" mat-dialog-close>Login with Facebook</button>
+      </tr>
+    </table>
+    <a (click)="openDialog2()" [routerLink]="['maverick']" mat-dialog-close>Register</a>
+
+  </mat-card>
+
+  <br/>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<div id="demo" class="example-card1" keyboard="false" data-backdrop="static">
+  <div style="background-color: rgb(255, 255, 255); border-radius: 8px; min-height: 400px; padding-top: 7px; width: 383px;">
+    <div style="position: static; height: 100%; width: 100%;">
+      <div style="margin: 30px auto 0px; position: absolute; height: 55px; width: 55px;">
+
+      </div>
+      <div>
+        <div style="margin: 5px 26px 26px; text-align: center; font-weight: bold; font-size: 28px; color: rgb(85, 85, 85);">Welcome to Maverick</div>
+        <div style="text-align: center; font-weight: bold; color: rgb(204, 204, 204); font-size: 18px; margin: -25px 0px 20px;">Let's play with fun</div>
+      </div>
+      <div>
+        <div>
+          <div style="margin: 0px auto; position: relative; text-align: center;">
+            <div style="margin: 0px auto; width: 268px;">
+              <div>
+                <form method="POST" novalidate="">
+                  <fieldset style="position: relative; margin-bottom: 7px;">
+                    <input [(ngModel)]="authenticationModel.email" [ngModelOptions]="{standalone: true}" placeholder="Email" type="email" value="">
+
+
+                  </fieldset>
+                  <fieldset style="position: relative;">
+
+                    <input placeholder="Enter password" [ngModelOptions]="{standalone: true}" [(ngModel)]="authenticationModel.password" value="">
+                  </fieldset>
+                  <button aria-label="Continue Logging in your Maverick account" (click)="loginUser(authenticationModel)" type="submit" style="border: 0px; height: 36px; display: inline-block; border-radius: 4px; -webkit-font-smoothing: antialiased; padding: 0px 18px; font-size: 15px; font-weight: bold; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; vertical-align: middle; text-align: center; background-color: rgb(189, 8, 28); color: rgb(255, 255, 255); width: 100%;"
+                    mat-dialog-close>
+                    <div>Continue </div>
+                  </button>
+                </form>
+                <p class="or">Or</p>
+                <div>
+                  <div style="position: relative;">
+                    <div>
+                      <button (click)="socialSignIn('google')" type="button" style="margin-top:20px; border: 0px;  height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; text-align: left; background-clip: padding-box; background-color:#e84104; margin-bottom: 9px; position: absolute; transition: opacity 0.2s linear; width: 100%;">
+                        <span class="spanLogin" mat-dialog-close>Login with Google</span>
+                      </button>
+                      <div style="height: 40px; padding-top: 10px; padding-bottom: 4px; text-align: left;">
+                        <span style="vertical-align: bottom; width: 268px; height: 40px;">
+                          <iframe name="f1be749753ed0d8" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                            allow="encrypted-media" src="https://www.facebook.com/v2.7/plugins/login_button.php?app_id=274266067164&amp;button_type=continue_with&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df10caf54e0fb5a4%26domain%3Din.pinterest.com%26origin%3Dhttps%253A%252F%252Fin.pinterest.com%252Ff6eb241209ae4%26relation%3Dparent.parent&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px"
+                            style="border: none; visibility: visible; width: 268px; height: 40px;" class=""></iframe>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                  <div style="height: 10px;"></div>
+                  <div style="position: relative;">
+                    <div>
+                      <button (click)="socialSignIn('facebook')" aria-label="" class="FacebookConnectButton active" type="button" style="margin-top:20px; border: 0px; height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; text-align: left; background-clip: padding-box; background-color: rgb(66, 103, 178); margin-bottom: 9px; position: absolute; transition: opacity 0.2s linear; width: 100%;">
+                        <span class="spanLogin" mat-dialog-close>Login with Facebook</span>
+                      </button>
+                      <div style="height: 40px; padding-top: 10px; padding-bottom: 4px; text-align: left;">
+                        <div class="fb-login-button fb_iframe_widget" data-scope="public_profile,email,user_likes,user_birthday,user_friends" onlogin="checkLoginState"
+                          data-button-type="continue_with" data-use-continue-as="true" data-width="268px" data-size="large"
+                          login_text="" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=274266067164&amp;button_type=continue_with&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px">
+                          <span style="vertical-align: bottom; width: 268px; height: 40px;">
+                            <iframe name="f1be749753ed0d8" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                              allow="encrypted-media" title="fb:login_button Facebook Social Plugin" src="https://www.facebook.com/v2.7/plugins/login_button.php?app_id=274266067164&amp;button_type=continue_with&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df10caf54e0fb5a4%26domain%3Din.pinterest.com%26origin%3Dhttps%253A%252F%252Fin.pinterest.com%252Ff6eb241209ae4%26relation%3Dparent.parent&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px"
+                              style="border: none; visibility: visible; width: 268px; height: 40px;" class=""></iframe>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top: 15px;">
+                <span class="" style="-webkit-font-smoothing: antialiased; font-size: 11px; font-weight: normal; text-align: center; transition: opacity 0.2s linear; color: rgb(170, 170, 170); width: 224px;">
+                  <span>By continuing, you agree to Maverick's T & C
+                  </span>
+                  <a (click)="openDialog2()" [routerLink]="['maverick']">Register</a>
+
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+<form>
+    <div>
+        <div style="margin: 5px 26px 26px; text-align: center; font-weight: bold; font-size: 28px; color: rgb(85, 85, 85);">Welcome to Maverick</div>
+        <div style="text-align: center; font-weight: bold; color: rgb(204, 204, 204); font-size: 18px; margin: -25px 0px 20px;">Let's play with fun</div>
+      </div>
+  <!-- <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleTextarea">Example textarea</label>
+    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+  </div> -->
+
+  <div>
+      <div>
+        <div style="margin: 0px auto; position: relative; text-align: center;">
+          <div style="margin: 0px auto; width: 268px;">
+            <div>
+              <form method="POST" novalidate="">
+                <fieldset style="position: relative; margin-bottom: 7px;">
+                  <input [(ngModel)]="authenticationModel.email" [ngModelOptions]="{standalone: true}" placeholder="Email" type="email" value="">
+
+
+                </fieldset>
+                <fieldset style="position: relative;">
+
+                  <input type="password" placeholder="Enter password" [ngModelOptions]="{standalone: true}" [(ngModel)]="authenticationModel.password" value="">
+                </fieldset>
+                <button aria-label="Continue Logging in your Maverick account" (click)="loginUser(authenticationModel)" type="submit" style="border: 0px; height: 36px; display: inline-block; border-radius: 4px; -webkit-font-smoothing: antialiased; padding: 0px 18px; font-size: 15px; font-weight: bold; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; vertical-align: middle; text-align: center; background-color: rgb(189, 8, 28); color: rgb(255, 255, 255); width: 100%;"
+                  mat-dialog-close>
+                  <div>Continue </div>
+                </button>
+              </form>
+              <p class="or">Or</p>
+              <div>
+                <div style="position: relative;">
+                  <div>
+                    <button (click)="socialSignIn('google')" type="button" style="margin-top:20px; border: 0px;  height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; text-align: left; background-clip: padding-box; background-color:#e84104; margin-bottom: 9px; position: absolute; transition: opacity 0.2s linear; width: 100%;">
+                      <span class="spanLogin" mat-dialog-close>Login with Google</span>
+                    </button>
+                    <div style="height: 40px; padding-top: 10px; padding-bottom: 4px; text-align: left;">
+                      <span style="vertical-align: bottom; width: 268px; height: 40px;">
+                        <iframe name="f1be749753ed0d8" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                          allow="encrypted-media" src="https://www.facebook.com/v2.7/plugins/login_button.php?app_id=274266067164&amp;button_type=continue_with&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df10caf54e0fb5a4%26domain%3Din.pinterest.com%26origin%3Dhttps%253A%252F%252Fin.pinterest.com%252Ff6eb241209ae4%26relation%3Dparent.parent&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px"
+                          style="border: none; visibility: visible; width: 268px; height: 40px;" class=""></iframe>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div style="height: 10px;"></div>
+                <div style="position: relative;">
+                  <div>
+                    <button (click)="socialSignIn('facebook')" aria-label="" class="FacebookConnectButton active" type="button" style="margin-top:20px; border: 0px; height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; box-shadow: none; cursor: pointer; margin-top: 10px; text-align: left; background-clip: padding-box; background-color: rgb(66, 103, 178); margin-bottom: 9px; position: absolute; transition: opacity 0.2s linear; width: 100%;">
+                      <span class="spanLogin" mat-dialog-close>Login with Facebook</span>
+                    </button>
+                    <div style="height: 40px; padding-top: 10px; padding-bottom: 4px; text-align: left;">
+                      <div class="fb-login-button fb_iframe_widget" data-scope="public_profile,email,user_likes,user_birthday,user_friends" onlogin="checkLoginState"
+                        data-button-type="continue_with" data-use-continue-as="true" data-width="268px" data-size="large"
+                        login_text="" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=274266067164&amp;button_type=continue_with&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px">
+                        <span style="vertical-align: bottom; width: 268px; height: 40px;">
+                          <iframe name="f1be749753ed0d8" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no"
+                            allow="encrypted-media" title="fb:login_button Facebook Social Plugin" src="https://www.facebook.com/v2.7/plugins/login_button.php?app_id=274266067164&amp;button_type=continue_with&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2FRQ7NiRXMcYA.js%3Fversion%3D42%23cb%3Df10caf54e0fb5a4%26domain%3Din.pinterest.com%26origin%3Dhttps%253A%252F%252Fin.pinterest.com%252Ff6eb241209ae4%26relation%3Dparent.parent&amp;container_width=268&amp;locale=en_US&amp;scope=public_profile%2Cemail%2Cuser_likes%2Cuser_birthday%2Cuser_friends&amp;sdk=joey&amp;size=large&amp;use_continue_as=true&amp;width=268px"
+                            style="border: none; visibility: visible; width: 268px; height: 40px;" class=""></iframe>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="margin-top: 15px;">
+              <span class="" style="-webkit-font-smoothing: antialiased; font-size: 11px; font-weight: normal; text-align: center; transition: opacity 0.2s linear; color: rgb(170, 170, 170); width: 224px;">
+                <span>By continuing, you agree to Maverick's T & C
+                </span>
+                <a (click)="openDialog2()" [routerLink]="['maverick']">Register</a>
+
+              </span>
+            </div>
+          </div>
+        </div>
+      </div></div>
+</form>

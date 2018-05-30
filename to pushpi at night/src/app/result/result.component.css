@@ -1,0 +1,22 @@
+img{
+  zoom:25%;
+}
+.container{
+  /* padding: 0% 50% 0% 50%; */
+  /* background-color: yellowgreen; */
+
+}
+.card .card-image img{
+  /* top:15px;
+  left:15px; */
+  /* zoom:90%; */
+}
+.card{
+  /* background-color: deepskyblue; */
+}
+
+.halfway-fab{
+position: absolute;
+right:0;
+bottom:0;
+}

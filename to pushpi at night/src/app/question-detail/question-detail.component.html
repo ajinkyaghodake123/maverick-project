@@ -1,0 +1,153 @@
+<!-- <div class="alignment" *ngFor="let question of questionGen">
+  <strong>Question Stem:</strong> {{ question.questionStem }}
+  <br>
+  <hr>
+  <strong>Question Level:</strong> {{ question.questionLevel }}
+  <br>
+  <hr>
+  <strong>Correct Answer:</strong> {{ question.questionStem }}
+  <br>
+  <hr>
+  <strong>Options: </strong>
+  <ul>
+    <li>{{question.option1}}</li>
+    <li>{{question.option2}}</li>
+    <li>{{question.option3}}</li>
+    <li>{{question.option4}}</li>
+
+  </ul>
+  <div class="container">
+    <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+    <button mat-raised-button color="accent" (click)="delete(question)">Delete</button>
+  </div>
+</div> -->
+
+
+<div *ngFor=" let question of questionGen" class="example-container">
+
+  <div class="alignment">
+
+    <label>
+
+      <span>Question Id: </span>{{ question.questionId}}
+
+    </label>
+
+    <br>
+
+    <br>
+
+    <label>
+
+      <span>Question Stem:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.questionStem">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Question Level:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.questionLevel">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Option1:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.option1">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Option2:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.option2">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Option3:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.option3">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Option4:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.option4">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <label>
+
+      <span>Correct Answer:</span>
+
+      <mat-form-field>
+
+        <input matInput [(ngModel)]="question.correctAnswer">
+
+      </mat-form-field>
+
+    </label>
+
+    <br>
+
+    <div>
+
+      <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+
+      <button mat-raised-button color="primary" (click)="save(question)" (click)="goBack()">Save</button>
+
+      <button mat-raised-button color="accent" (click)="delete(question)">Delete</button>
+
+    </div>
+
+  </div>
+
+</div>
+<br>
+<br>
+<br>

@@ -1,0 +1,47 @@
+
+<mat-grid-list cols="12" rowHeight="300px" style="margin-top: 100px">
+  <mat-grid-tile [colspan]="6" [rowspan]="1">
+  <mat-card class="example-card">
+    <a routerLink="/question" ><mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="margin-left: -32px;"><b>Add Categories</b></mat-card-title>
+    </mat-card-header>
+    <img class="center" style="width: 175px; height: 100px; margin-left: 30px " mat-card-image src="http://www.clker.com/cliparts/u/F/K/J/M/A/add-button-hi.png"
+      alt="Photo of a admin">
+    <mat-card-content>
+      <p style="margin-left: 20%">
+        Add categories and topics
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <!-- <mat-checkbox>Add</mat-checkbox>> -->
+      <button class="arrangeButton" style="margin-left: 55px;" mat-raised-button color="warn"  mat-dialog-close>Add Categories</button>
+    </mat-card-actions>
+  </a>
+  </mat-card>
+</mat-grid-tile>
+
+<mat-grid-tile [colspan]="6" [rowspan]="1">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title style="margin-left: -32px;"><b>grafna</b></mat-card-title>
+    </mat-card-header>
+    <img class="center" style="width: 175px; height: 100px; margin-left: 30px " mat-card-image src="https://www.yourfreeworld.com/script/demo/shoppingcart/images/Admin.png"
+      alt="Photo of a admin">
+    <mat-card-content>
+      <p style="margin-left: 20%">
+       see grafna charts
+      </p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <!-- <mat-checkbox>Add</mat-checkbox>> -->
+      <button class="arrangeButton" style="margin-left: 55px;" mat-raised-button color="warn" (click)="grafna()" >Grafna</button>
+    </mat-card-actions>
+  
+  </mat-card>
+</mat-grid-tile>
+
+</mat-grid-list>

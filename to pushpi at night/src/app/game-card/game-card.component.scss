@@ -1,0 +1,330 @@
+// :host {
+//   display: block;
+//   margin-top: 1rem;
+// }
+
+// .grid {
+//   margin: 0 auto;
+// }
+// .card-title
+// {
+//   margin-top:15px;
+// }
+// // .masonry-demo {
+// //   margin:0;
+// //   padding:0;
+// //   align-content: center;
+// //   flex-wrap: wrap;
+// //   margin-left: 40px;
+  
+// // }
+// .container {
+//   max-width: 1200px;
+//   margin: 0 auto;
+// }
+// .card {
+  
+//   text-decoration-color: white;
+//   display: inline-block;
+//   margin-bottom: 1rem;
+//   width: 18rem;
+//   border-radius: 5px;
+//   margin:11px;
+//   box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+// }
+// .tile {
+//   min-height: 200px;
+//   background-color: #ccc;
+//   background-size: cover !important;
+// }
+
+// img
+// {
+// width: 50%;
+// height: 50%;
+// border-radius: 50%;
+// }  
+// .card-body
+// {
+//   border-radius: 2px;  
+// }
+// h5{
+//   float: left;
+// }
+// .ff{
+//   float: right;
+// }
+// .f{
+//   float: left;
+// }
+// mat-fab{
+//   padding-bottom: 20px;
+// }
+// .block1
+// {
+//   box-shadow: 1px 4px 8px rgba(0, 0, 0, .5);
+//   opacity: 0.5;
+//   display: block;
+//     position: absolute;
+//     left:0;
+//     top:0;
+// }
+// .block2
+// {
+//    color:black;
+//   background-color:lightgrey;
+// }
+// .block3
+// {
+//     padding:5px 70px;
+// }
+
+ //css by pushpinder
+//  .center{
+//   margin: 0 auto;
+//      }
+// .mat-card-title {
+//   font-size: 21px !important;
+//   font-weight: 400;
+//   font-weight: bolder;
+//     }
+// .right{
+//   align-content:right;
+//     }
+// .aa{
+//   margin-top:3% !important;
+//     }
+// mat-card{
+//   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22) !important;
+//   min-width:130px !important;
+//   margin-right:2% 
+//     }
+// .container{
+//   margin-top:0;
+//   margin-bottom:0;
+//     }
+// mat-card{
+//   margin-bottom: 10px;
+//     }
+
+// .play{
+//   position: absolute;
+//   right: 0px;
+//   bottom:0px;
+// }
+// mat-icon{
+//   zoom:130% !important;
+//   margin-bottom:1%;
+// }
+// .gameName{
+//   margin:0 auto;
+// }
+// .ques{
+//   font-size:15px;
+// }
+// p {
+// right:0;
+// }
+// @media screen and (max-width: 1200px) {
+//   mat-card-title > span{
+//   font-size:15px !important;
+//   letter-spacing: 1px;
+// }
+// p{
+//   font-size:13px !important;
+
+// }
+// }
+// @media screen and (max-width: 1000px) {
+//   mat-card-title > span{
+//     align-content:center;
+//   font-size:10px !important;
+//   max-height:31px;
+// }
+// }
+// @media screen and (max-width: 575px) {
+//   mat-card-title > span{
+//     align-content:center;
+//   font-size:9px !important;
+//   max-height:31px; 
+// }
+// p{
+//   font-size:8px !important;
+
+// }}
+
+// @media screen and (max-width: 351px) {
+//   mat-card-title > span{
+//     align-content:center;
+//   font-size:7px !important;
+//   max-height:31px; 
+//   font-color:white;
+// }
+// // .aa:nth-of-type(2){
+// //   background-color:deeppink;
+// // }
+// p{
+//   font-size:8px !important;
+
+// }}
+
+//old css
+:host {
+
+  display: block;
+
+  margin-top: 1rem;
+
+}
+
+
+
+.grid {
+
+  margin: 0 auto;
+
+}
+
+.card-title
+
+{
+
+  margin-top:15px;
+
+}
+
+// .masonry-demo {
+
+//   margin:0;
+
+//   padding:0;
+
+//   align-content: center;
+
+//   flex-wrap: wrap;
+
+//   margin-left: 40px;
+
+  
+
+// }
+
+.container {
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+}
+
+.card {
+
+  
+
+  text-decoration-color: white;
+
+  display: inline-block;
+
+  margin-bottom: 1rem;
+
+  width: 18rem;
+
+  border-radius: 5px;
+
+  margin:11px;
+
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+
+}
+
+.tile {
+
+  min-height: 200px;
+
+  background-color: #ccc;
+
+  background-size: cover !important;
+
+}
+
+
+
+img
+
+{
+
+width: 50%;
+
+height: 50%;
+
+border-radius: 50%;
+
+}  
+
+.card-body
+
+{
+
+  border-radius: 2px;  
+
+}
+
+h5{
+
+  float: left;
+
+}
+
+.ff{
+
+  float: right;
+
+}
+
+.f{
+
+  float: left;
+
+}
+
+mat-fab{
+
+  padding-bottom: 20px;
+
+}
+
+.block1
+
+{
+
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, .5);
+
+  opacity: 0.5;
+
+  display: block;
+
+    position: absolute;
+
+    left:0;
+
+    top:0;
+
+}
+
+.block2
+
+{
+
+   color:black;
+
+  background-color:lightgrey;
+
+}
+
+.block3
+
+{
+
+    padding:5px 70px;
+
+}

@@ -1,0 +1,170 @@
+<div class="example-container" fxLayout="column" fxLayoutAlign="space-between start">
+  <div class="caption">Create a Game</div>
+  <br>
+
+  <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="10px">
+    <!-- <mat-form-field>
+          <input matInput type="number" placeholder="Game Id" required [(ngModel)]="gameId">
+      </mat-form-field> -->
+    <mat-form-field>
+      <input matInput placeholder="Game Name" required [(ngModel)]="gameName">
+    </mat-form-field>
+    <mat-form-field>
+          <input matInput placeholder="Game Image" required [(ngModel)]="gameImage">
+      </mat-form-field>
+
+
+    <!-- <label for="gameImage" class="gameImage">Game Image</label>
+    <input type="file" required [(ngModel)]="gameImage" (change)="onFileSelected($event)" /> -->
+
+    <mat-form-field>
+      <textarea matInput placeholder="Game Description" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" #gameRules
+        required></textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="date" placeholder="Created On " required [(ngModel)]="createdOn">
+    </mat-form-field>
+  </div>
+
+  <div id="Game" fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="10px" fxFlex="70%" fxFlexFill>
+    <mat-form-field>
+      <mat-select placeholder="Select Game Type" [(ngModel)]="gameTypeName">
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="-15px">
+          <mat-option value="Single Player Timer Based Game" (click)="setSingleType()">Single Player Timer Based Game</mat-option>
+          <mat-option value="Single Player Adaptive Game" (click)="setSingleType()">Single Player Adaptive Game</mat-option>
+          <mat-option value="MultiPlayer Fastest Finger Game" (click)="setGameType()">MultiPlayer Fastest-Finger Game</mat-option>
+        </div>
+      </mat-select>
+    </mat-form-field>
+  </div>
+
+
+
+
+  <mat-accordion fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+    <div fxFlex="40%" fxFlexFill>
+      <mat-expansion-panel [disabled]="singlePlayerIsDisabled">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Set the Properties for Single Player Game
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-list role="list">
+          <div class="gm-question-level">
+            <mat-list-item role="listitem">Easy Level Questions</mat-list-item>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Number of Questions " [(ngModel)]="easyLevel">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Total Score" [(ngModel)]="easyQuestionsScore">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Time (sec)" [(ngModel)]="easyQuestionsTime">
+            </mat-form-field>
+          </div>
+          <br>
+          <br>
+          <div class="gm-question-level">
+            <mat-list-item role="listitem">Medium Level Questions</mat-list-item>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Number of Questions" [(ngModel)]="mediumLevel">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Total Score" [(ngModel)]="mediumQuestionsScore">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Time (sec)" [(ngModel)]="mediumQuestionsTime">
+            </mat-form-field>
+          </div>
+          <br>
+          <br>
+          <div class="gm-question-level">
+            <mat-list-item role="listitem">Hard Level Questions</mat-list-item>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Number of Questions " [(ngModel)]="advancedLevel">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Total Score " [(ngModel)]="advanceQuestionsScore">
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput type="number" placeholder="Time (sec)" [(ngModel)]="advanceQuestionsTime">
+            </mat-form-field>
+          </div>
+        </mat-list>
+        <div>
+          <mat-list-item role="listitem"> Total</mat-list-item>
+          <mat-form-field>
+            <input matInput type="number" [(ngModel)]="easyLevel + mediumLevel + advancedLevel" placeholder="Total Number of Questions "
+              readonly>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" [(ngModel)]="easyQuestionsScore + mediumQuestionsScore + advanceQuestionsScore" placeholder="Total Score "
+              readonly>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" [(ngModel)]="easyQuestionsTime + mediumQuestionsTime + advanceQuestionsScore" placeholder="Duration of Game"
+              readonly>
+          </mat-form-field>
+        </div>
+        <br>
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+          <mat-form-field>
+            <textarea matInput placeholder="Rules" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" #gameRules required></textarea>
+          </mat-form-field>
+        </div>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+          <mat-checkbox>Advanced Game Mode</mat-checkbox>
+          <mat-icon (click)="openInfoDialog()">help</mat-icon>
+        </div>
+
+        <br>
+
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+            <button mat-raised-button color="primary" style="align-content: center" (click)="goBack()" (click)="add()" (click)="openSnackBar()">Create Single Player Game</button>
+        </div>
+      </mat-expansion-panel>
+    </div>
+    <div fxFlex="40%" fxFlexFill>
+      <mat-expansion-panel [disabled]="multiPlayerIsDisabled">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Set Multiplayer Game Properties
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Number of Players" [(ngModel)]="numberOfPlayers" #numberofPlayers required>
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Number of Questions " [(ngModel)]="numberOfQuestions">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="number" placeholder="Time per Question (sec)" [(ngModel)]="timePerQuestion">
+        </mat-form-field>
+        <br>
+        <div fxLayout="column" fxLayoutAlign="start start" fxLayoutGap="5px">
+          <mat-form-field>
+            <textarea matInput placeholder="Rules" matTextareaAutosize matAutosizeMinRows="2" matAutosizeMaxRows="5" #gameRules required></textarea>
+          </mat-form-field>
+        </div>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+          <mat-checkbox>Advanced Game Mode</mat-checkbox>
+          <mat-icon (click)="openInfoDialog()">help</mat-icon>
+        </div>
+
+        <br>
+
+        <div fxLayout="row" fxLayoutAlign="start start" fxLayoutGap="5px">
+            <button mat-raised-button color="primary" style="align-content: center" (click)="goBack()" (click)="addMultiGame()" (click)="openSnackBar()">Create Multiplayer Game</button>
+        </div>
+      </mat-expansion-panel>
+    </div>
+  </mat-accordion>
+  <br>
+  <br>
+  <br>
+</div>

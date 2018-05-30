@@ -1,0 +1,267 @@
+// #userImage
+// {
+//     margin-top: 4%;
+//     float: right;
+//     max-width: 160px;
+//     margin: 0;
+//     padding: 1em;
+//     margin-right: 5%;
+//     opacity : 1.6 !important;
+  
+// }
+
+
+
+
+.profile {
+  width: 100%;
+  position: relative;
+  background: #FFF;
+  border: 1px solid #D5D5D5;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.profile .image {
+  display: block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  text-align: center;
+  border: 5px solid #FFF;
+}
+
+.profile .user {
+  position: relative;
+  padding: 0px 5px 5px;
+}
+
+.profile .user .avatar {
+  position: absolute;
+  left: 20px;
+  top: -85px;
+  z-index: 2;
+}
+
+.profile .user h2 {
+  font-size: 16px;
+  line-height: 20px;
+  display: block;
+  float: left;
+  margin: 4px 0px 0px 135px;
+  font-weight: bold;
+}
+
+.profile .user .actions {
+  float: right;
+}
+
+.profile .user .actions .btn {
+  margin-bottom: 0px;
+}
+
+.profile .info {
+  float: left;
+  margin-left: 20px;
+}
+
+.img-profile{
+    height:100px;
+    width:100px;
+}
+
+.img-cover{
+    width:100%;
+    height:300px;
+}
+
+@media (max-width: 768px) {
+  .btn-responsive {
+    padding:2px 4px;
+    font-size:80%;
+    line-height: 1;
+    border-radius:3px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  .btn-responsive {
+    padding:4px 9px;
+    font-size:90%;
+    line-height: 1.2;
+  }
+}
+
+
+
+
+.progressBar{
+    position:relative;
+    padding:50% 50% 50% 0%;
+}
+
+@media screen and (max-width: 395px) {
+.progressBar{
+  padding:71% 0% 0% 0% !important;
+  margin: 57% -58% 0%;
+}
+}
+
+@media screen and (max-width: 310px) {
+  .progressBar{
+   padding:71% 0% 0% 0% !important;
+    margin: 131% -62% 3%;
+  }
+  }
+
+  @media screen and (max-width: 290px) {
+    .progressBar{
+      padding:105% 0% 0% 0% !important;
+      margin: 101% -62% 3%;
+    }
+    }
+
+// #gamePlay{
+//     position:absolute;
+//     margin-top: 10%;
+//     float: left; 
+//     max-width: 160px;
+//     margin-right: 9%;
+//     padding: 1em;
+
+// // }
+// .userImageText {
+//     font-stretch: expanded;
+//     font-size: 20px;
+//     color: #00AABf;
+// margin-right:12%;
+// font-weight: bolder;
+// }
+
+//  .hh:hover{
+//     transform: scale(2.42);
+    
+//   }
+
+//   .hh:hover .userImageText{
+// display: none;
+// background: rgba(0, 0, 0, .9);
+
+// //   }
+// .row
+// {
+//     background-attachment: fixed;
+// }
+
+// #background{
+//     position:relative;
+//     background-blend-mode: color-burn;
+//     background-size: 100% 100%;
+//     -webkit-filter: grayscale(100%);
+//     filter: grayscale(100%);
+// }
+// .gamePlayHrs
+// {
+//     font-size-adjust: initial;
+//     font-weight: bolder;
+//     font-size: 30px;
+//     color: gold;
+//     margin-top: 0;
+// }
+
+#percentComplete
+{
+    font-weight: bolder;
+    letter-spacing: 3px;
+    font-size: 20px;
+
+}
+
+  // .overlay {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background: rgba(0, 0, 0, 0);
+  //   transition: background 0.5s ease;
+  // }
+  
+//   .cont:hover .overlay {
+//     display: block;
+//     background: rgba(0, 0, 0, .9);
+//   }
+  
+ 
+//   .cont:hover .title {
+//     top: 90px;
+//   }
+  
+//   .button {
+//     position: absolute;
+//     width: 500px;
+//     left:0;
+//     top: 180px;
+//     opacity: 0;
+//     transition: opacity .35s ease;
+//   }
+  
+//   .button a {
+//     width: 100px !important;
+//     padding: 12px 48px;
+//     text-align: left;
+//     color: white;
+//     border: solid 2px white;
+//     z-index: 1;
+//     background-color: #555555;
+//     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+//   }
+  
+//   .cont:hover .button {
+//     opacity: 1;
+//   }
+  
+//   .addComp{
+//     position: absolute;
+//     right: 100px;
+//     top: 9px;
+// }
+
+// .updateProfileText{
+
+// font-weight: bolder;
+// letter-spacing: 3px;
+// word-spacing: 4px;
+// font-size: 16px;
+// }
+// .gameTrophy{
+//   font-stretch: expanded;
+//   font-size: 20px;
+//   color: #00AABf;
+// font-weight: bolder;
+// }
+
+
+
+// .box {
+//   display: flex;
+//   align-items: stretch;
+// }
+
+// .box :first-child {
+//   width: 150px;
+// }
+// .recent{
+
+// }
+
+.gameHeader{
+  font-weight:bolder;
+letter-spacing: 3px;
+text-align: center;
+font-size:18px;
+}
+.img-fluid{
+  width:auto !important;
+  height:auto !important ;
+}

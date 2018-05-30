@@ -1,0 +1,21 @@
+
+<div *ngFor='let d of user'>
+  <div class="row" (click)="changeCover()" style=" opacity:0.8; background-image:url('http://www.webgranth.com/wp-content/uploads/2013/11/computer-Game-Desktop-Wallpaper2.jpg');">
+    <div class="col s12">
+      <p class="gamePlayHrs"> 42 Hrs : (Total Played)
+   
+      </p>
+    </div>
+    <div class="col s12" id=userImage class="col s12 m2">
+      <a href="#">
+        <img id=userImage class="circle hh" src={{d.image}}>
+      </a>
+      <br>
+      <p class=" userImageText">
+        {{d.userName}},&nbsp;{{d.age}}&nbsp;{{userLocation}}</p>
+      <p class=" userImageText">{{d.level}}, {{d.levelName}}</p>
+    </div>
+    <div class="col s12" class="progressBar">
+    </div>
+  </div>
+  <div>

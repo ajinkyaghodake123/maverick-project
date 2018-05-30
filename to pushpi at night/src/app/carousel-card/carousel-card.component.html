@@ -1,0 +1,57 @@
+<!-- <div class="separator">Categories</div>
+<br> -->
+<!-- <div class="container">
+  <ngu-carousel #myCarousels1 [inputs]="carouselTileOne" (carouselLoad)="carouselTileOneLoad()" (onMove)="onMoveData($event)"
+    [reset]="rsts" (initData)="getCarouselData($event)">
+    <ngu-tile NguCarouselItem *ngFor="let tile of categories; let i = index;">
+      <div class="wBg">
+        <a (click)="onClick(tile.name)" [routerLink]="['/game-by-categoryId', tile.id]">
+          <div class="tileName">{{tile.name}}</div>
+
+          <div class="gameNumber">Games : {{tile.no_of_topics}}</div>
+        </a>
+        <div class="likeReadButton">
+        <button mat-icon-button color="warn" (click)="changeColor(tile.id)" [color]="cc">
+          <mat-icon mat-icon-button>favorite</mat-icon>
+        </button>
+
+        <mat-icon class="ff" (click)="openDialog()">more_vert</mat-icon>
+        </div>
+      </div>
+    </ngu-tile>
+    <button class="leftRs" NguCarouselPrev>&lt;</button>
+    <button class="rightRs" NguCarouselNext>&gt;</button>
+  </ngu-carousel>
+  <br>
+  <div class="separator">{{recommendations}}</div>
+  <div *ngIf="showRecommendations">
+  </div>
+</div> -->
+<div class="separator">Categories</div>
+<br>
+<div class="container"> 
+  <ngu-carousel #myCarousels1 [inputs]="carouselTileOne" (carouselLoad)="carouselTileOneLoad()" (onMove)="onMoveData($event)"
+    [reset]="rsts" (initData)="getCarouselData($event)">
+    <ngu-tile NguCarouselItem *ngFor="let tile of categories; let i = index;">
+      <div class="wBg">
+        <a (click)="onClick(tile.name,tile.category_id,id)">
+          <div class="tile" [style.background]="'url(' + tile.img + ')'">
+          </div>
+          <h4>{{tile.name}}</h4>
+          <p>Games : {{tile.no_of_topics}}</p>
+        </a>
+        <button mat-icon-button color="warn" (click)="changeColor(tile.id)" [color]="cc">
+          <mat-icon mat-icon-button aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+        </button>
+        <a class="ff" mat-raised-button (click)="openDialog()">Readmore..</a>
+      </div>
+
+    </ngu-tile>
+    <button class="leftRs" NguCarouselPrev>&lt;</button>
+    <button class="rightRs" NguCarouselNext>&gt;</button>
+  </ngu-carousel>
+  <br>
+  <div class="separator">{{recommendations}}</div>
+  <div *ngIf="showRecommendations">
+  </div>
+</div>

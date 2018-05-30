@@ -1,0 +1,22 @@
+<mat-list>
+  <h1 mat-subheader><strong style="font-size: 18px">Questions</strong></h1>
+  <mat-list-item *ngFor="let question of questionGen">
+    <a routerLink="/question-detail" [queryParams]=" {questionId: question.questionId, topicName:topicName, categoryId:categoryId}">
+      <h4 mat-line><span style="font-size: 30px">- </span>{{ question.questionStem }}</h4>
+    </a>
+  </mat-list-item>
+  <mat-divider></mat-divider>
+</mat-list>
+
+<div class="container">
+  <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+  <button mat-raised-button color="accent" (click)="generate()">Generate</button>
+</div>
+
+<div style="margin-right:40px;">
+  <a routerLink="/add-question" [queryParams]=" {categoryId:categoryId, topicName: topicName}">
+    <button style="float: right" mat-fab color="primary">
+      <span style="font-size: 30px">+</span>
+    </button>
+  </a>
+</div>

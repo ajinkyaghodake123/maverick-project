@@ -1,0 +1,88 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    background-size: cover;
+  }
+
+  mat-chip {
+    max-width: 70px;
+  }
+  #or1
+  {
+    text-align: center;
+    margin-top:-25px;
+    margin-bottom:1%;
+  }
+
+  #or2
+  {
+    text-align: center;
+   margin-top:4.5%;
+    margin-bottom:3.5%;
+  }
+
+  .RegisterDialog{
+    min-height:400px !important;
+    max-height:400px !important;
+
+    background:red !important;
+  }
+
+  form {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+}
+input {
+  border-bottom: 0px solid rgb(224, 55, 55) !important;
+  box-shadow: 0 0px 0 0 #000 !important;
+  color: #000;
+}
+.fullDiv{
+  margin-bottom:10%;
+}
+
+.regButton{
+  float: right;
+}
+
+.mat-raised-button{
+ background: limegreen;
+}
+
+td{
+  margin: 0 auto;
+}
+
+.mat-horizontal-content-container {
+    overflow: auto;
+    padding: 0px 25px 66px 14px;
+}
+.regForm{
+  align-content: center;
+ font-size : 14px;
+}
+
+.content{
+  font-size: 14px !important;
+}
+
+mat-error #mat-error-2{
+display: none;
+}
+.form-control{
+  border: none !important;
+}
+.message{
+  color: red;
+  font-size: 10px;
+  }

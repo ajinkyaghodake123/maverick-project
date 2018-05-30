@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4 col-6 aa" *ngFor="let option1 of allCategoriesList;let i = index">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>{{option1.categoryName | uppercase}} </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src={{option1.categoryImage}} alt="{{option1.categoryName}}">
+        <mat-card-actions>
+          <mat-checkbox name="options" value="{{option}}" (change)="updateCheckedOptions(option1, $event)">
+          </mat-checkbox>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<button class="continue" mat-raised-button color="primary" (click)="selectedCategories()" >Continue</button>

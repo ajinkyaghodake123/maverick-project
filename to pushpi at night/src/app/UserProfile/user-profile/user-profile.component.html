@@ -1,0 +1,213 @@
+<div>
+  <!-- <div *ngFor='let d of user'>
+    <div class="row user" style=" opacity:0.8; background-image:url('https://i.pinimg.com/736x/fe/17/7c/fe177cd1818a1941b60be53768292442--largest-waterfall-the-waterfall.jpg')">
+      <div>
+        <p class="gamePlayHrs"> 42 Hrs : (Total Played)
+        </p>
+      </div>
+      <div id=userImage>
+        <a href="#">
+          <img id=userImage class="circle hh" src={{d.image}}>
+        </a>
+        <br>
+        <p class=" userImageText">
+          {{d.userName}},&nbsp;{{d.age}}&nbsp;
+        </p>
+        <button mat-raised-button [routerLink]="['/form',d.userId]">Update Profile</button>
+      </div>
+    </div>
+
+  </div> -->
+
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
+
+    <div class="profile clearfix" *ngFor='let d of user'>
+      <div>
+        <div class="image">
+          <img src="https://lorempixel.com/700/300/nature/2/" class="img-cover">
+        </div>
+        <div class="user clearfix">
+          <div class="avatar">
+            <img src="https://bootdey.com/img/Content/user-453533-fdadfd.png" class="img-thumbnail img-profile">
+          </div>
+          <h2>{{d.userName}}</h2>
+          <div class="actions">
+            <div class="btn-group">
+              <button class="btn btn-default btn-sm tip btn-responsive" [routerLink]="['/form',d.userId]">
+                <span class="glyphicon glyphicon-share-alt glyphicon glyphicon-white"></span>
+                <i class="fa fa-user-plus" aria-hidden="true"></i>
+                Update Profile</button>
+            </div>
+          </div>
+        </div>
+        <div class="info">
+          <p>
+            <i class="fa fa-globe" aria-hidden="true" style="color:#4a148c"></i>
+            <span class="title">Address:</span> {{d.location}}</p>
+          <p>
+            <i class="fa fa-gift" aria-hidden="true" style="color:#33b5e5"></i>
+            <span class="title">Date of birth:</span>{{d.age}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--###################################### U P D A T E  PROFILE   D A T A ################################-->
+  <!--###################################### G A M E   D A T A #############################################-->
+  <!--########################## == R E C E N T == P L A Y E D == G A M E == ##############################-->
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2 col-4">
+        <div class="progressBar">
+          <circle-progress [percent]="56" [radius]="50" [outerStrokeWidth]="16" [innerStrokeWidth]="0" [outerStrokeColor]="'#33b5e5'"
+            [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="2000" [subtitleColor]="'#00aabf'" [unitsColor]="'#00aabf'"
+            [titleColor]="'#00aabf'">
+          </circle-progress>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-9 col-xs-4 col-12">
+        <div class="container">
+          <div class="column justify-content-center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-2 col-12">
+              <table>
+                <thead>
+                  <tr>
+                    <th id="neutral">Total Played</th>
+                    <th id=win>Won</th>
+                    <th id=defeat>Draw</th>
+                    <th id=lost>Defeat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td id="neutral">0</td>
+                    <td id=win>0</td>
+                    <td id=defeat>0</td>
+                    <td id=lost>0</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-2 col-12">
+              <p id=center class="gameHeader md-body-2">Favorite Games</p>
+              <mat-tab-group>
+                <mat-tab label="Game 1">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 col-12">
+                        <img src="https://lh3.googleusercontent.com/A7fn0UEbGKNDMx8Uedl9k9YNVORLsfrlqqfo9z6h7quCbl_w2H6pkKEHbfNYMn3up70=s180-rw"
+                          class="img-fluid">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 col-12">
+                        <div class="likeContent">
+                          The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions are
+                          in Hindi. - Think Fast Do Fast.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Game 2">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 col-12">
+                        <img class="image" src="https://lh3.ggpht.com/cDanO7DuSF96V4N66b9unk5M_rFbJ6XoQryFXHcWC7S0UYMoqmJZVistkKhRCue_Pqg=s180-rw">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 col-12">
+                        <div class="likeContent">
+                          The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions are
+                          in Hindi. - Think Fast Act Fast.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Game 3">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 col-12">
+                        <img class="image" src="https://lh3.ggpht.com/9oBSutZgzHofQbgepZ82k4L1nA6V-j-H9msX5f99EMDcZcBMv8INQLloGr-W68h0a7U5=s180-rw">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 col-12">
+                        <div class="likeContent">
+                          The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions are
+                          in Hindi. - Think Fast Work Fast.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Game 4">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 col-12">
+                        <img class="image" src="https://lh3.ggpht.com/FTkmcJsMs4IXpgB6W-CwJZo42N7v3AAEMYkQk67FpCO3ezIvOYWjLHOJ9n5o6W0SgWc=s180-rw">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 col-12">
+                        <div class="likeContent">
+                          The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions are
+                          in Hindi. - Think Fast Play Fast.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+                <mat-tab label="Game 5">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-2 col-12">
+                        <img class="image" src="https://lh3.ggpht.com/REt6RtbfYQB7ZWkvqm-NO8ytZSZEmRmwxvNyQeFVSBLkY_M680nYPzbDfMO9D1hOsnI=s180-rw">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8 col-xs-10 col-12">
+                        <div class="likeContent">
+                          The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions are
+                          in Hindi. - Think Fast Process Fast.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </mat-tab>
+              </mat-tab-group>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-10 col-xs-12 col-12">
+        <div class="recent">
+          <p id=center class="gameHeader md-body-2">Recently Played Games</p>
+          <div>
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <i class="material-icons circle blue">timer_10</i>
+                <span class="title">Game 1</span>
+                <p>First Line
+                  <br> Last Played : 1 min 20 s ago
+                </p>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle blue">child_friendly</i>
+                <span class="title">Game 2</span>
+                <p>First Line
+                  <br> Last Played : 50 min ago
+                </p>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle green">nature_people</i>
+                <span class="title">Game 3</span>
+                <p>First Line
+                  <br> Last Played : 14 hrs ago
+                </p>
+              </li>
+              <li class="collection-item avatar">
+                <i class="material-icons circle red">toys</i>
+                <span class="title">Game 4</span>
+                <p>First Line
+                  <br> Last Played : 3 days ago
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

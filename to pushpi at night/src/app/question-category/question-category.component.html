@@ -1,0 +1,16 @@
+<div style="overflow: hidden;">
+  <h1 class="margin">Categories:</h1>
+  <mat-grid-list cols="6" rowHeight="300px" style="width: 100%">
+    <mat-grid-tile *ngFor="let category of categories" [colspan]="2" [rowspan]="2">
+      <mat-card class="example-card2">
+        <a routerLink="/category-details" [queryParams]="{categoryId:category.categoryId}">
+          <img src="{{ category.categoryImage }}" alt="Photo of a {{ category.categoryName }}" style="width: 198px; height: 180px;"
+            mat-card-image>
+          <mat-card-content>
+            <h3 style="text-align: center">{{ category.categoryName | uppercase }}</h3>
+          </mat-card-content>
+        </a>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

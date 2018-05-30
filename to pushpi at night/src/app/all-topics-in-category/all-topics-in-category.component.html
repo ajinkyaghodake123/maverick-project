@@ -1,0 +1,39 @@
+<h1 class="margin">List of Topics:</h1>
+<mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile *ngFor="let question of questionGen" [colspan]="2" [rowspan]="2">
+        <mat-card class="example-card">
+            <a routerLink="/topic-details" [queryParams]=" {topicName: question.topicName,categoryId:categoryId}">
+                <mat-card-header>
+                    <mat-card-title>{{ question.topicName | uppercase }}</mat-card-title>
+                </mat-card-header>
+                <img style="height: 220px;" mat-card-image src="{{ question.topicImage }}" alt="Photo of a {{ question.topicName }}">
+                <mat-card-content>
+                    <p>
+                        {{question.topicName | uppercase}} is one of the oldest academic disciplines and, through its inclusion of astronomy, perhaps
+                        the oldest. Over the last two millennia, physics, chemistry, biology, and certain branches of mathematics
+                        were a part.
+                    </p>
+                </mat-card-content>
+            </a>
+            <hr style="border: solid 1px">
+            <mat-card-actions>
+                <a routerLink="/create-game" [queryParams]=" {topicName: question.topicName,categoryId:categoryId}">
+                    <button mat-raised-button color="primary" style="float: right;">Create Game</button>
+                </a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
+
+<div class="container">
+    <button mat-raised-button color="accent" (click)="goBack()">Back</button>
+</div>
+
+
+<div style="margin-right:40px; margin-bottom: 100px;">
+    <a routerLink="/add-topic" [queryParams]=" {categoryId:categoryId}">
+        <button style="float: right" mat-fab color="primary">
+            <span style="font-size: 30px">+</span>
+        </button>
+    </a>
+</div>

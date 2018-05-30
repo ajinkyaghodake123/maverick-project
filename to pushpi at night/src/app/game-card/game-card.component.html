@@ -1,0 +1,131 @@
+<!-- <app-carousel-card *ngIf="show"></app-carousel-card> -->
+<!-- <div class="container">
+  <div class="grid" #grid>
+    <div class="card" *ngFor="let card of cards">
+      <div class="card-body">
+        <div class="block1 block2 block3">Recommended</div>
+        <div class="tile" [style.background]="'url(assets/images/5.jpeg)'">
+
+          <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        <p class="card-text f">Questions : {{ card.topic_id }}</p> -->
+<!-- <h5 class="card-title">{{ card.name }}</h5>
+      <img src="assets/images/1.jpg" alt="no image"/>
+      <p class="card-text">{{ card.no_of_question                                                                                                                                                                                                                                                                                            }}</p>
+       -->
+<!-- <br style="clear: both;"> -->
+<!-- <a href="#" class="btn btn-primary">Play</a> -->
+<!-- <div style="padding-bottom: 30px">
+          <a (click)="routeToQuiz(card.game_id,card.game_type,card.game_type_id,card.topic_id)" class="f" mat-raised-button color="primary" >Play</a>
+          <a class="ff" mat-raised-button (click)="openDialog()">Readmore</a>
+        </div>
+      </div>
+    </div>
+  </div> -->
+<!-- <button *ngIf="limit < 100"  (click)="showMoreImages()">Show More Images</button>
+  <h2 *ngIf="limit >= 100">No More Images</h2> -->
+<!-- </div>
+<br/>
+<br/><br/> -->
+
+
+
+<!-- <app-carousel-card *ngIf="show"></app-carousel-card> 
+ <div class="container">
+ 
+    <div class="card" *ngFor="let card of cards">
+      <div class="card-body">
+        <div class="block1 block2 block3">Recommended</div>
+        <div class="tile" [style.background]="'url(assets/images/5.jpeg)'">
+          <h5 class="card-title">{{ card.name }}</h5>
+        </div>
+        <p class="card-text f">Questions : {{ card.no_of_question }}</p>
+        <br style="clear: both;">
+        <div style="padding-bottom: 30px">
+          <a (click)="routeToQuiz(card.game_id,card.game_type,card.game_type_id,card.topic_id)" class="f" mat-raised-button color="primary">Play</a>
+          <a class="ff" mat-raised-button (click)="openDialog()">Readmore</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br/>
+<br/>
+<br/> -->
+
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 col-6 aa" *ngFor="let card of cards">
+      <mat-card>
+        <mat-card-title>
+          <span class="gameName">{{ card.name }}</span>
+        </mat-card-title>
+        <img src="https://www.laps.in/elite_sports_logo_2_by_s_havrisik-d2xqmsr.jpg" alt="{{card.name}}" style="width:100%">
+        <p class="ques">{{ card.no_of_question }} Questions
+        </p>
+        <button class="play" mat-icon-button>
+          <mat-icon color="primary" (click)="routeToQuiz(card.game_id,card.game_type,card.game_type_id,card.topic_id)" aria-label="Example icon-button with a heart icon">play_circle_outline</mat-icon>
+        </button>
+      </mat-card>
+    </div>
+  </div>
+</div> -->
+
+<!-- <app-carousel-card *ngIf="show"></app-carousel-card> -->
+
+<div class="container">
+
+  <div class="grid" #grid>
+
+    <div class="card" *ngFor="let card of cards">
+
+      <div class="card-body">
+
+        <div class="block1 block2 block3">{{card.recommendation}}</div>
+
+        <div class="tile" [style.background]="'url(' + card.gameImage + ')'">
+
+
+
+          <h5 class="card-title">{{ card.name }}</h5>
+
+        </div>
+
+        <p class="card-text f">Questions : {{ card.topic_id }}</p>
+
+        <!-- <h5 class="card-title">{{ card.name }}</h5>
+
+      <img src="assets/images/1.jpg" alt="no image"/>
+
+      <p class="card-text">{{ card.no_of_question                                                                                                                                                                                                                                                                                            }}</p>
+
+       -->
+
+        <br style="clear: both;">
+
+        <!-- <a href="#" class="btn btn-primary">Play</a> -->
+
+        <div style="padding-bottom: 30px">
+
+          <a (click)="routeToQuiz(card.game_id,card.game_type,card.game_type_id,card.topic_id)" class="f" mat-raised-button color="primary" >Play</a>
+
+          <a class="ff" mat-raised-button (click)="openDialog()">Readmore</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- <button *ngIf="limit < 100"  (click)="showMoreImages()">Show More Images</button>
+
+  <h2 *ngIf="limit >= 100">No More Images</h2> -->
+
+</div>
+
+<br/>
+
+<br/><br/>

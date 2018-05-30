@@ -1,0 +1,25 @@
+<div class="example-container">
+  <h3>Add a Topic</h3>
+  <mat-form-field class="example-form-field">
+    <input matInput type="number" placeholder="Topic ID" [(ngModel)]="topicId" />
+    <button mat-button *ngIf="topicId" matSuffix mat-icon-button aria-label="Clear" (click)="topicId=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="Topic Name" [(ngModel)]="topicName" />
+    <button mat-button *ngIf="topicName" matSuffix mat-icon-button aria-label="Clear" (click)="topicName=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <input matInput type="text" placeholder="Topic Image" [(ngModel)]="topicImage" />
+    <button mat-button *ngIf="topicImage" matSuffix mat-icon-button aria-label="Clear" (click)="topicImage=''">
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <button mat-raised-button type="submit" color="accent" (click)="onSubmit()" (click)="goBack()">Add</button>
+</div>

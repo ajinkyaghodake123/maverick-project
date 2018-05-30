@@ -1,0 +1,178 @@
+<div [routerLink]="['']">
+  <div *ngFor='let d of user'>
+    <div class="row user" style=" opacity:0.8; background-image:url('https://i.pinimg.com/736x/fe/17/7c/fe177cd1818a1941b60be53768292442--largest-waterfall-the-waterfall.jpg')">
+      <div>
+        <p class="gamePlayHrs"> 42 Hrs : (Total Played)
+        </p>
+      </div>
+      <div id=userImage>
+        <a href="#">
+          <img id=userImage class="circle hh" src={{d.image}}>
+        </a>
+        <br>
+        <p class=" userImageText">
+          {{d.userId}} {{d.userName}},&nbsp;{{d.age}}&nbsp;{{d.location}}
+        </p>
+        <!-- <p class=" userImageText"> {{ d.level }} {{ d.levelName }}</p> -->
+        <!-- <div class="col s4 m4">
+        </div> -->
+        <button mat-raised-button [routerLink]="['/form',d.userId]">Update Profile</button>
+      </div>
+    </div>
+  </div>
+  <!--###################################### U P D A T E  PROFILE   D A T A ################################-->
+  <!--###################################### G A M E   D A T A #############################################-->
+  <!--########################## == R E C E N T == P L A Y E D == G A M E == ##############################-->
+  <div class="row">
+    <div class="progressBar cont" class="col s3">
+      <circle-progress [percent]="56" [radius]="50" [outerStrokeWidth]="16" [innerStrokeWidth]="0" [outerStrokeColor]="'#78C000'"
+        [innerStrokeColor]="'#C7E596'" [animation]="true" [animationDuration]="2000" [subtitleColor]="'#00aabf'" [unitsColor]="'#00aabf'"
+        [titleColor]="'#00aabf'">
+      </circle-progress>
+    </div>
+  
+  
+    <div class="col s5">
+      <table>
+        <thead>
+          <tr>
+            <th id="neutral">Total Played</th>
+            <th id=win>Won</th>
+            <th id=defeat>Draw</th>
+            <th id=lost>Defeat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="neutral">0</td>
+            <td id=win>0</td>
+            <td id=defeat>0</td>
+            <td id=lost>0</td>
+          </tr>
+        </tbody>
+      </table>
+  
+      <p id=center class="gameHeader md-body-2">Favorite Games</p>
+      <mat-tab-group>
+        <mat-tab label="Game 1">
+          <div class="likeImage">
+            <img class="image" src="https://lh3.googleusercontent.com/A7fn0UEbGKNDMx8Uedl9k9YNVORLsfrlqqfo9z6h7quCbl_w2H6pkKEHbfNYMn3up70=s180-rw">
+            <div class="middle">
+              <div class="text">0 Plays</div>
+            </div>
+          </div>
+          <div class="likeContent">The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions
+            are in Hindi. - Think Fast Act Fast.
+          </div>
+        </mat-tab>
+        <mat-tab label="Game 2">
+          <div class="likeImage">
+            <img class="image" src="https://lh3.ggpht.com/cDanO7DuSF96V4N66b9unk5M_rFbJ6XoQryFXHcWC7S0UYMoqmJZVistkKhRCue_Pqg=s180-rw">
+            <div class="middle">
+              <div class="text">0 Plays</div>
+            </div>
+          </div>
+          <div class="likeContent">The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions
+            are in Hindi. - Think Fast Act Fast.
+          </div>
+        </mat-tab>
+        <mat-tab label="Game 3">
+          <div class="likeImage">
+            <img class="image" src="https://lh3.ggpht.com/9oBSutZgzHofQbgepZ82k4L1nA6V-j-H9msX5f99EMDcZcBMv8INQLloGr-W68h0a7U5=s180-rw">
+            <div class="middle">
+              <div class="text">0 Plays</div>
+            </div>
+          </div>
+          <div class="likeContent">The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions
+            are in Hindi. - Think Fast Act Fast.
+          </div>
+        </mat-tab>
+        <mat-tab label="Game 4">
+          <div class="likeImage">
+            <img class="image" src="https://lh3.ggpht.com/FTkmcJsMs4IXpgB6W-CwJZo42N7v3AAEMYkQk67FpCO3ezIvOYWjLHOJ9n5o6W0SgWc=s180-rw">
+            <div class="middle">
+              <div class="text">0 Plays</div>
+            </div>
+          </div>
+          <div class="likeContent">The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions
+            are in Hindi. - Think Fast Act Fast.
+          </div>
+        </mat-tab>
+        <mat-tab label="Game 5">
+          <div class="likeImage">
+            <img class="image" src="https://lh3.ggpht.com/REt6RtbfYQB7ZWkvqm-NO8ytZSZEmRmwxvNyQeFVSBLkY_M680nYPzbDfMO9D1hOsnI=s180-rw">
+            <div class="middle">
+              <div class="text">0 Plays</div>
+            </div>
+          </div>
+          <div class="likeContent">The very famous "Fastest Finger First" quiz game, now on your finger tips. - Test your general knowledge. - Questions
+            are in Hindi. - Think Fast Act Fast.
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+    <div>
+    </div>
+  
+  
+    <div class="col s4">
+      <p id=center class="gameHeader md-body-2">Recently Played Games</p>
+      <div>
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">timer_10</i>
+            <span class="title">Game 1</span>
+            <p>First Line
+              <br> Last Played : 1 min 20 s ago
+            </p>
+            <a href="#!" class="secondary-content">
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">child_friendly</i>
+            <span class="title">Game 2</span>
+            <p>First Line
+              <br> Last Played : 50 min ago
+            </p>
+            <a href="#!" class="secondary-content">
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle green">nature_people</i>
+            <span class="title">Game 3</span>
+            <p>First Line
+              <br> Last Played : 14 hrs ago
+            </p>
+            <a href="#!" class="secondary-content">
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+            </a>
+          </li>
+          <li class="collection-item avatar">
+            <i class="material-icons circle red">toys</i>
+            <span class="title">Game 4</span>
+            <p>First Line
+              <br> Last Played : 3 days ago
+            </p>
+            <a href="#!" class="secondary-content">
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+              <i class="material-icons">grade</i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div></div>

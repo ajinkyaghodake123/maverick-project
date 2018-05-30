@@ -1,0 +1,60 @@
+/* .container1 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  
+    background-color: blueviolet;
+  } */
+  h1.app-name {
+    margin-left: 8px;
+    color: blanchedalmond;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .primary {
+      background-color:#252527;
+  }
+
+  h1 a {
+      text-decoration: none;
+      margin-left: 8px;
+      color: blanchedalmond;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  }
+  .menu-icon {
+    color:#EB5757;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  #example-icon {
+    padding: 0 30px;
+  }
+  .sidenav-container {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    /* background-image:  url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/math-magic-hd-wallpapers.jpg'); */
+    /* http://ak2.picdn.net/shutterstock/videos/5401832/thumb/1.jpg */
+  }
+  
+  .content{
+    margin-bottom:4.4%!important;
+  }
+  
+  
+  
+  .footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    background-color:black;
+    color: blanchedalmond;
+    z-index:1!important;
+  }
+  
+  

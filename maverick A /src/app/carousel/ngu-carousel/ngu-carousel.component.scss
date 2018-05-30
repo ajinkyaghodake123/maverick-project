@@ -1,0 +1,23 @@
+:host {
+  display: block;
+  position: relative;
+  &.ngurtl {
+    direction: rtl;
+  }
+}
+
+.ngucarousel {
+  .ngucarousel-inner {
+    position: relative;
+    overflow: hidden;
+    .ngucarousel-items {
+      position: relative;
+      display: flex;
+    }
+  }
+}
+
+.nguvertical {
+  flex-direction: column;
+}
+

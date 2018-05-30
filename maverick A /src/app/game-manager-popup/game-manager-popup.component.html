@@ -1,0 +1,90 @@
+
+
+
+
+
+
+    <mat-card class="example-card">
+     
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title class = "name"><h2>Category</h2> Time:</mat-card-title>
+    </mat-card-header>
+    
+    
+    <mat-card-content>
+      <h4>Description: {{gameType}}</h4>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+        very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+        <h4>Rules:</h4>
+        <p>
+          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes
+          very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
+        </p>
+      </mat-card-content>
+    <mat-card-actions>
+      <a routerLink= "add">
+      <button mat-raised-button color = "primary" style="align-content: center">Play</button>
+    </a>
+    </mat-card-actions>
+  </mat-card>
+
+
+
+
+
+
+
+<!-- <div class="col-md-7 main">
+<mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Log in</mat-card-title>
+        </mat-card-header>
+        
+        <mat-form-field>
+          <input matInput [(ngModel)]="authenticationModel.email" placeholder="enter userid">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput [(ngModel)]="authenticationModel.password" placeholder="enter password">
+        </mat-form-field>
+      
+        <mat-card-actions>
+          
+          <mat-chip-list class="mat-chip-list-stacked">
+            <mat-chip *ngFor="let chip of availableColors" selected="true" [color]="chip.color" (click)="loginUser(authenticationModel)">
+              {{chip.name}}
+            </mat-chip>
+        
+            <mat-chip *ngFor="let chip of availableRegisterColors" selected="true" [color]="chip.color" (click)="loginUser(authenticationModel)">
+              {{chip.name}}
+            </mat-chip>
+            <button class="btn btn-success" (click)="regiseterUser(user)" >  Register  </button>
+          </mat-chip-list>
+        </mat-card-actions>
+      </mat-card> -->
+<!-- <form>
+
+<div class="form-group">
+    <label for="id">user Name:</label>
+    <input [(ngModel)]="authenticationModel.email" placeholder="user name" name="email" class="form-control" id="email">
+</div>
+
+<div class="form-group">
+    <label for="name">password:</label>
+    <input [(ngModel)]="authenticationModel.password" placeholder="password" name="password" class="form-control" id="password">
+</div> 
+<div>
+    <button class="btn btn-success" (click)="loginUser(authenticationModel)" >  Log in  </button>
+</div>
+<div>
+    <button class="btn btn-success" (click)="loginUser(authenticationModel)" >  forgot password </button>
+</div>
+</form> -->
+<!-- <br/>
+</div> -->

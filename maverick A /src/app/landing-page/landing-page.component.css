@@ -1,0 +1,39 @@
+
+  .example-card {
+    max-width: 600px;
+    margin-top: 10%;
+    margin-left: 0%;
+  }
+  
+  /* .example-header-image {
+    background-image: url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/ruoEhTkNeiwq2lefr/videoblocks-quiz-neon-light-on-brick-wall-night-club-bar-blinking-sign-style-video-available-in-4k-fullhd-and-hd-render-footage_s3alkh5hg_thumbnail-full01.png');
+    background-size: cover;
+
+  } */
+  .exaple-button{
+      margin-left: 20%;
+  }
+  .buttons{
+      margin-left: 200px;
+  }
+  /* body {
+    
+    background-image: url('http://ak2.picdn.net/shutterstock/videos/5401832/thumb/1.jpg')
+    
+} */
+div.landingpage{
+    /* 
+    width: 500px;
+    margin: auto;
+    marg */
+    padding: 1px;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('http://ak2.picdn.net/shutterstock/videos/5401832/thumb/1.jpg');  */
+    background-size: 100%;
+}
+div.back{
+    /* background-image: url('http://ak2.picdn.net/shutterstock/videos/5401832/thumb/1.jpg');  */
+    background-size: 100%;
+    
+}

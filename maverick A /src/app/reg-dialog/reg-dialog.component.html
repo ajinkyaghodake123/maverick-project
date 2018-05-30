@@ -1,0 +1,321 @@
+<div class="container">
+    <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+      <mat-step [stepControl]="firstFormGroup">
+        <div class="regForm">
+          <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>User Name</ng-template>
+            <table mat-table class="table form-group">
+              <tr>
+                <td title="User Name">
+                  User Name</td><div class="message">{{msg1}}</div>
+                <td>
+                  <div class="form-group">
+                    <mat-form-field>
+                      <input matInput [(ngModel)]="user.userName" placeholder="How they call you" formControlName="firstCtrl" required>
+                    </mat-form-field>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td title="E-mail">
+                  E-Mail</td>
+                <td>
+                  <div class="form-group">
+                    <mat-form-field>
+                      <input class="form-control" matInput aria-invalid="true" (blur)="set()" (keyup)="checkEmail(user.email)"  [(ngModel)]="user.email" placeholder="We won't full your inbox"
+                        formControlName="firstCtrl" required>
+                        
+                    </mat-form-field>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td title="Password">
+                  Password</td>
+                <td>
+                  <div class="form-group">
+                    <mat-form-field>
+                      <input type="password" class="form-control" (blur)="set()" (keyup)="check(user.password)" matInput [(ngModel)]="user.password" placeholder="I promise to keep it secret"
+                        formControlName="firstCtrl" required>
+                       <div class="message">{{msg}}</div> 
+                    </mat-form-field>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <button mat-raised-button class="regButton" matStepperNext>Next</button>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <div class="regForm">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Personal Info</ng-template>
+            <table mat-table>
+              <tr>
+                <td title="City">
+                  City</td>
+                <td>
+                  <mat-form-field>
+                    <input matInput [(ngModel)]="user.location" placeholder="Where can we meet" formControlName="secondCtrl" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+              <tr>
+                <td title="'Gender'">
+                  Gender</td>
+                <td>
+                  <!-- <input matInput [(ngModel)]="user.gender" placeholder="gender" formControlName="secondCtrl" required> -->
+                  <!-- <mat-radio-group>
+                      <mat-radio-button [(ngModel)]="user.gender" value="Male">Male</mat-radio-button>
+                      <mat-radio-button [(ngModel)]="user.gender" value="Female">Female</mat-radio-button>
+                    </mat-radio-group>                   -->
+                  <!-- <mat-form-field>
+                    <input type="radio" [(ng-model)]="user.gender" value="Male">Male
+                    <input type="radio" [(ng-model)]="user.gender" value="Female">Female
+  
+                  </mat-form-field> -->
+                </td>
+              </tr>
+              <tr>
+                <td title="'Age'">
+                  Date Of Birth</td>
+                <td>
+                  <mat-form-field>
+                    <input matInput class="form-control" [(ngModel)]="user.age" placeholder="Happy Birthday in advance" class="datepicker" formControlName="secondCtrl"
+                      [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker startView="year" [startAt]="startDate"></mat-datepicker>
+                  </mat-form-field>
+                  <!-- <input matInput  [(ngModel)]="user.age" placeholder="age" formControlName="secondCtrl" required> -->
+  
+                </td>
+              </tr>
+              <tr>
+                <td title="'Mobile'">
+                  Mobile</td>
+                <td>
+                  <mat-form-field>
+                    <input matInput [(ngModel)]="user.mobile" placeholder="No calls without permission" formControlName="secondCtrl" required>
+                  </mat-form-field>
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <button class="regButton" mat-raised-button (click)="regiseterUser(user)" mat-dialog-close>Register</button>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+
+<!-- <td title="E-mail">
+    E-Mail</td>
+  <td>
+    <div class="form-group">
+      <div class="form-control" [formGroup]="testForm" novalidate>
+        <mat-form-field>
+          <input  matInput placeholder="We won't full your inbox" [(ngModel)]="user.email" [formControl]="testForm.controls.email">
+          <ng-template ngFor let-error [ngForOf]="errorTest" ngProjectAs="mat-error">
+            <mat-error *ngIf="testForm.controls.email.hasError(error.type)" [innerHTML]="error.msg">
+              Please enter a valid email address
+            </mat-error>
+          </ng-template>
+        </mat-form-field>
+      </div>
+    </div>
+  </td> -->
+
+<!-- 
+<div class="container">
+<mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out user name</ng-template>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="user.userName" placeholder=" First name Last name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button color="primary" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your email</ng-template>
+          <mat-form-field>
+            <input matInput  [(ngModel)]="user.email" placeholder="email" formControlName="secondCtrl" required>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input matInput type="password" [(ngModel)]="user.password" placeholder="password" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+          <ng-template matStepLabel>Fill out your personal information</ng-template>
+          <mat-form-field>
+            <input matInput  [(ngModel)]="user.location" placeholder="city" formControlName="secondCtrl" required>
+          </mat-form-field><br>
+       
+          <mat-form-field>
+            <input matInput  [(ngModel)]="user.gender" placeholder="gender" formControlName="secondCtrl" required>
+           
+          </mat-form-field><br>
+          <mat-form-field>
+              
+            <input matInput  [(ngModel)]="user.age" placeholder="age" formControlName="secondCtrl" required>
+          </mat-form-field><br>
+          <mat-form-field>
+            <input matInput  [(ngModel)]="user.mobile" placeholder="mobile number" formControlName="secondCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    
+    <mat-step>
+        
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-raised-button color="accent" (click)="regiseterUser(user)" mat-dialog-close>Register</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper></div> -->
+  
+
+<!-- 
+  <div class="container">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+      <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+          <ng-template matStepLabel>Fill out user name</ng-template>
+          <mat-form-field>
+            <input matInput  [(ngModel)]="user.userName" placeholder=" First name Last name" formControlName="firstCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button color="primary" matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your email</ng-template>
+            <mat-form-field>
+              <input matInput  [(ngModel)]="user.email" placeholder="email" formControlName="secondCtrl" required>
+            </mat-form-field><br>
+            <mat-form-field>
+              <input matInput type="password" [(ngModel)]="user.password" placeholder="password" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+      
+      <mat-step [stepControl]="secondFormGroup">
+          <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Fill out your personal information</ng-template>
+            <mat-form-field>
+              <input matInput  [(ngModel)]="user.location" placeholder="city" formControlName="secondCtrl" required>
+            </mat-form-field><br>
+         
+            <mat-form-field>
+              <input matInput  [(ngModel)]="user.gender" placeholder="gender" formControlName="secondCtrl" required>
+             
+            </mat-form-field><br>
+            <mat-form-field>
+                
+              <input matInput  [(ngModel)]="user.age" placeholder="age" formControlName="secondCtrl" required>
+            </mat-form-field><br>
+            <mat-form-field>
+              <input matInput  [(ngModel)]="user.mobile" placeholder="mobile number" formControlName="secondCtrl" required>
+            </mat-form-field>
+            <div>
+              <button mat-button color="primary" matStepperNext>Next</button>
+            </div>
+          </form>
+        </mat-step>
+      
+      <mat-step>
+          
+        <ng-template matStepLabel>Done</ng-template>
+        You are now done.
+        <div>
+          <button mat-raised-button color="accent" (click)="regiseterUser(user)" mat-dialog-close>Register</button>
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper></div> -->
+
+<!-- 
+<mat-horizontal-stepper [linear]="isLinear" #stepper="matHorizontalStepper">
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out user name</ng-template>
+      <mat-form-field>
+        <input matInput  [(ngModel)]="user.userName" placeholder=" First name Last name" formControlName="firstCtrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-button color="primary" matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your email</ng-template>
+       
+        <mat-form-field>            
+          <input matInput  [(ngModel)]="user.email" placeholder="email" formControlName="secondCtrl" required>          
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <input matInput type="password" [(ngModel)]="user.password" placeholder="password" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button color="accent" matStepperPrevious>Back</button>
+          <button mat-button color="primary" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+  <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your personal information</ng-template>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="user.location" placeholder="city" formControlName="secondCtrl" required>
+        </mat-form-field><br>
+        
+        <mat-form-field>
+          <input matInput  [(ngModel)]="user.gender" placeholder="gender" formControlName="secondCtrl" required>
+          
+        </mat-form-field><br>
+        <mat-form-field>
+            
+          <input matInput  [(ngModel)]="user.age" placeholder="age" formControlName="secondCtrl" required>
+        </mat-form-field><br>
+        <mat-form-field>
+          <input matInput  [(ngModel)]="user.mobile" placeholder="mobile number" formControlName="secondCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button color="accent" matStepperPrevious>Back</button>
+          <button mat-button color="primary" matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+   
+  <mat-step>
+    
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button color="accent" matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-raised-button color="accent" (click)="regiseterUser(user)" mat-dialog-close>Register</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper> -->

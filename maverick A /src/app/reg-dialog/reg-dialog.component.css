@@ -1,0 +1,35 @@
+.example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-card {
+    max-width: 300px;
+  }
+  
+  .example-header-image {
+    /* background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg'); */
+    background-size: cover;
+  }
+  mat-chip {
+    max-width: 70px;
+  }
+  #or1
+  {
+    text-align: center;
+    margin-top:-25px;
+    margin-bottom:1%;
+  }
+
+  #or2
+  {
+    text-align: center;
+   margin-top:4.5%;
+    margin-bottom:3.5%;
+  }
+.message{
+color: red;
+font-size: 10px;
+}
