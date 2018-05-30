@@ -1,0 +1,138 @@
+version: '2.0'
+services:
+ login-service: 
+   container_name: login-service-container 
+   build: .
+   restart: always
+   ports:
+     - "8088:8080"
+   depends_on:
+     - mysqldb
+ 
+ mysqldb: 
+   image: mysql:5.7
+   image: mysql
+   container_name: mysqldb
+   restart: always 
+   ports:
+     - "3306:3306"
+   environment:
+     MYSQL_ROOT_PASSWORD: root
+     ALLOW_EMPTY_PASSWORD: "yes"
+     MYSQL_USER: root
+     MYSQL_PASSWORD: root
+     MYSQL_DATABASE: quizzApp
+
+
+
+
+
+#version: '2'
+#
+#services:
+#
+#  db:
+#    image: mysql
+#    restart: always
+#    environment:
+#      MYSQL_ROOT_PASSWORD: example
+#  login-service: 
+#   container_name: login-service-container 
+#   build: .
+#   restart: always
+#   ports:
+#     - "8088:8080"
+#   depends_on:
+#     - db
+
+
+#version: '2 '
+#services:
+# 
+#
+# mysql:
+#  container_name: some-mysql
+#  image: mysql/mysql-server:5.7
+#  environment:
+#   MYSQL_DATABASE: test
+#   MYSQL_ROOT_PASSWORD: hellokoding
+#   MYSQL_ROOT_HOST: '%'
+#  ports:
+#  - "3306:3306"
+#  restart: always
+ 
+# login-service:
+#   restart: always
+#   build: .
+#   
+#   volumes:
+#     - ./app:/app
+#     - ~/.m2:/root/.m2
+#   expose:
+#     - "8080"
+#   command: mvn clean spring-boot:run
+#   depends_on:
+#     
+#     - mysql
+#version : '2'
+#
+#services:
+#
+#  springappserver:
+#
+#    build:
+#
+#      context: . 
+#
+#      dockerfile: springapp.dockerfile
+#
+#    ports: 
+#
+#      - "8080:8080"
+#
+#    networks:
+#
+#      - net-spring-db
+#
+#    volumes:
+#
+#      - .:/vol/development
+#
+#    depends_on:
+#
+#      - mysqldbserver
+#
+#  mysqldbserver:
+#
+#    build:
+#
+#      context: . 
+#
+#      dockerfile: mysqldb.dockerfile
+#
+#    ports:
+#
+#      - "3306:3306"
+#
+#    networks:
+#
+#      - net-spring-db
+#
+#    environment:
+#
+#      MYSQL_DATABASE: testdb
+#
+#      MYSQL_USER: myuser
+#
+#      MYSQL_PASSWORD: mypassword
+#
+#      MYSQL_ROOT_PASSWORD: myrootpassword
+#
+#    container_name: mysqldbserver
+#
+#networks:
+#
+#  net-spring-db:
+#
+#    driver: bridge
+#  
